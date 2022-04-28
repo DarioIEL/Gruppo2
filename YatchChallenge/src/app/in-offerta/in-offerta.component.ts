@@ -10,6 +10,7 @@ export class InOffertaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

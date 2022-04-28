@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,7 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { OfferteComponent } from './home/offerte/offerte.component';
 import { ChatComponent } from './home/chat/chat.component';
 import { AcquistoComponent } from './acquisto/acquisto.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { AcquistoComponent } from './acquisto/acquisto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
