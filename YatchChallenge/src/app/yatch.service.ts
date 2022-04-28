@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Yatch } from './model.yatch';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class YatchService {
-
+  yatchInOfferta: Yatch[] = [];
   yatchList: Yatch[] = [
     {
       "id": 1,
@@ -35,17 +36,22 @@ export class YatchService {
     }
   ];
   
-  url: string = "";
+  url: string = "https://yatch-login-default-rtdb.europe-west1.firebasedatabase.app/yatch.json";
   
   constructor(private http:HttpClient) {  
   }
 
-  public getYatch(){
-    return this.yatchList;
-  }
-
   public getAll(){
-    return this.http.get(this.url);
+    return this.http
+    .get(this.url)
+    .pipe(map(responseData=>{
+      const yatchArr: Yatch[] = [];
+
+      for(let key in responseData){
+        yatchArr.push(responseData[key]);
+      }
+      return yatchArr;
+    }));
   }
   
   public updateYatch(yatch: Yatch){
@@ -57,20 +63,15 @@ export class YatchService {
   }
   
   
-  public getYatchOfferta(offerta: boolean) : Yatch[]{
-    //  array.forEach(y => {
-    //    if(y.offerta){
-    //      offertaYatch.push
-    //    }
-    //  }
-    //  )
-    //  ;
-    //  return this.getAll().subscribe(() => {
-
-      //  .filter(y => y.offerta == offerta);
-    //  })
-
-    return null;
-     
+  public getYatchOfferta() : Yatch[]{
+    this.getAll().subscribe(
+      (y)=>{
+        y.forEach(yat => {
+          if(yat.offerta == true)
+            this.yatchInOfferta.push(yat);
+        });
+      }
+    );
+    return this.yatchInOfferta;
   }
 }

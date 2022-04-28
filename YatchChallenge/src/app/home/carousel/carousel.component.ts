@@ -13,7 +13,7 @@ export class CarouselComponent implements OnInit {
   yatchList: Yatch[];
 
   ngOnInit(): void {
-    this.yatchList = this.yatchService.getYatch();
+    // this.yatchList = this.yatchService.getYatch();
   }
 
 }
