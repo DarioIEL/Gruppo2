@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { OfferteComponent } from './home/offerte/offerte.component';
 import { ChatComponent } from './home/chat/chat.component';
+import { AcquistoComponent } from './acquisto/acquisto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChatComponent } from './home/chat/chat.component';
     LoginComponent,
     CarouselComponent,
     OfferteComponent,
-    ChatComponent
+    ChatComponent,
+    AcquistoComponent
   ],
   imports: [
     BrowserModule,
