@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Yatch } from '../model.yatch';
+import { YatchService } from '../yatch.service';
 
 @Component({
   selector: 'app-in-offerta',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InOffertaComponent implements OnInit {
 
-  constructor() { }
+  yatchs: Yatch[] = [];
+  yatchService: YatchService;
 
+  constructor(yatchService: YatchService) {
+    this.yatchs = yatchService.getYatchOfferta();
+  }
+  
   ngOnInit(): void {
+    console.log(this.yatchs);
     
   }
 
