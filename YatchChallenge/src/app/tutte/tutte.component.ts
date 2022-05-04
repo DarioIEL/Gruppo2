@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Yatch } from '../model.yatch';
+import { YatchService } from '../yatch.service';
 
 @Component({
   selector: 'app-tutte',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TutteComponent implements OnInit {
 
-  constructor() { }
+  yatchs: Yatch[] = [];
+  yatchService: YatchService;
 
+  constructor(yatchService: YatchService) {
+    this.yatchService = yatchService;
+  }
+  
   ngOnInit(): void {
+    this.yatchService.getAll().subscribe((yatchs)=>{
+      this.yatchs = yatchs;
+    });
+    console.log(this.yatchs);
+    
   }
 
 }

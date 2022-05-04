@@ -46,13 +46,14 @@ export class YatchService {
     return this.http
     .get(this.url)
     .pipe(map(responseData=>{
-      const yatchArr: Yatch[] = [];
+      let yatchArr: Yatch[] = [];
 
       for(let key in responseData){
         yatchArr.push(responseData[key]);
       }
       return yatchArr;
     }));
+    
   }
   
   public updateYatch(yatch: Yatch){

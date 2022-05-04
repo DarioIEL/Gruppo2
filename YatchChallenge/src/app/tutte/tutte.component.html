@@ -1,2 +1,16 @@
-<!-- pagina che mostra tutti gli yatch disponibili -->
-<p>tutte works!</p>
+<div class="row">
+    <div class="col-3" *ngFor="let yatch of yatchs">
+        <div class="card" style="width: 18rem;">
+            <img src="{{yatch.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{yatch.nome}}</h5>
+              <p class="card-text">
+                  <ul>
+                      <li>{{yatch.descrizione}}</li>
+                      <li>Prezzo: €{{yatch.prezzo}}</li>
+                  </ul>
+              <a href="#" class="btn btn-danger">Acquista</a>
+            </div>
+          </div>
+    </div>
+</div>
