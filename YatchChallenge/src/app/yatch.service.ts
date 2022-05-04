@@ -66,14 +66,14 @@ export class YatchService {
   
   
   public getYatchOfferta() : Yatch[]{
-    this.getAll().subscribe(
-      (y)=>{
+    this.getAll()
+    .pipe(map((y)=>{
         y.forEach(yat => {
           if(yat.offerta == true)
             this.yatchInOfferta.push(yat);
         });
       }
-    );
+    ));
     return this.yatchInOfferta;
   }
 }

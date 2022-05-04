@@ -13,10 +13,11 @@ export class InOffertaComponent implements OnInit {
   yatchService: YatchService;
 
   constructor(yatchService: YatchService) {
-    this.yatchs = yatchService.getYatchOfferta();
+    this.yatchService = yatchService;
   }
   
   ngOnInit(): void {
+    this.yatchs = this.yatchService.getYatchOfferta();
     console.log(this.yatchs);
     
   }
