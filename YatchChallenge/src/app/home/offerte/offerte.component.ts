@@ -18,13 +18,8 @@ export class OfferteComponent implements OnInit {
   }
   
   ngOnInit(): void {
-<<<<<<< Updated upstream
     this.yatchService.getYatchOfferta().subscribe((yatch)=>{
       this.yatchs = yatch;
-=======
-    this.yatchService.getAll().subscribe((yatchs)=>{
-      this.yatchs = yatchs;
->>>>>>> Stashed changes
     });
     console.log(this.yatchs);
     
