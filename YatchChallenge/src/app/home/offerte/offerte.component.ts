@@ -18,7 +18,9 @@ export class OfferteComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.yatchs = this.yatchService.getYatchOfferta();
+    this.yatchService.getYatchOfferta().subscribe((yatch)=>{
+      this.yatchs = yatch;
+    });
     console.log(this.yatchs);
     
   }

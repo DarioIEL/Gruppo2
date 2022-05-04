@@ -65,15 +65,15 @@ export class YatchService {
   }
   
   
-  public getYatchOfferta() : Yatch[]{
-    this.getAll()
-    .pipe(map((y)=>{
-        y.forEach(yat => {
-          if(yat.offerta == true)
-            this.yatchInOfferta.push(yat);
-        });
-      }
-    ));
-    return this.yatchInOfferta;
+  public getYatchOfferta(){
+    return this.getAll()
+    .pipe(map((y => y.filter(y => y.offerta == true))));
+      //   y.forEach(yat => {
+      //     if(yat.offerta == true)
+      //       this.yatchInOfferta.push(yat);
+      //   });
+      // }
+    // ));
+    // return this.yatchInOfferta;
   }
 }
