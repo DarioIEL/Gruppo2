@@ -1,7 +1,14 @@
-.p{
-    text-decoration: greenyellow;
+.white1 {
+    color: rgb(255, 255, 255);
 }
 
-.white {
-    color: white;
+
+.white3{
+    color: black;
+}
+
+
+img{
+    width: 800px;
+    height: 650px;
 }
