@@ -7,8 +7,6 @@ import { Yatch } from './model.yatch';
   styleUrls: ['./app.component.css']
 })
 
-
-
 export class AppComponent {
 
 
