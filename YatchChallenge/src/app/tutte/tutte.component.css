@@ -2,8 +2,16 @@ li{
     list-style: none;
 }
 
-.card {
-    display: inline-block;
-    padding: 0.5rem;
-    
+.card img {
+    height: 9rem;
+}
+
+.card-text {
+    height: 15rem;
+    overflow-y: auto;
+}
+
+.btn-danger {
+    display: flex;
+    justify-content: center;
 }
