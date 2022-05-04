@@ -9,11 +9,11 @@ import { YatchService } from 'src/app/yatch.service';
 })
 export class CarouselComponent implements OnInit {
 
+  yatchList: Yatch[] = [];
   constructor(private yatchService: YatchService) { }
-  yatchList: Yatch[];
 
   ngOnInit(): void {
-    // this.yatchList = this.yatchService.getYatch();
+    this.yatchService.getAll();
   }
 
 }

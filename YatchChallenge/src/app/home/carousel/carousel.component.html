@@ -1,14 +1,37 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" *ngFor="let y of yatchList">
-      <img src={{y.img}} class="d-block w-100" alt="...">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cover-1631629430.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Bello yacht</h5>
+        <h6>250000 €</h6>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://www.repstatic.it/content/nazionale/img/2022/03/03/102621208-a46d4085-3fd6-4a1b-a66a-4c13bc6d83fb.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Yacht fantastico</h5>
+        <h6>400000 €</h6>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.ragusanews.com//immagini_articoli/03-07-2021/negli-yacht-di-lusso-la-parola-d-ordine-e-il-ponte-oasi-500.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Yacht di lusso</h5>
+        <h6>600000000 €</h6>
+      </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -18,3 +41,8 @@
 <div *ngFor="let y of yatchList">
   {{y.img}}
 </div> -->
+
+
+
+
+

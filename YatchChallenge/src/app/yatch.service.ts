@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class YatchService {
   yatchInOfferta: Yatch[] = [];
+  yatchList: Yatch[] = []
   // yatchList: Yatch[] = [
   //   {
   //     "id": 1,
@@ -38,7 +39,7 @@ export class YatchService {
   
   url: string = "https://yatch-login-default-rtdb.europe-west1.firebasedatabase.app/yatch.json";
   
-  constructor(private http:HttpClient) {  
+  constructor(private http:HttpClient) { 
   }
 
   public getAll(){
