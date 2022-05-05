@@ -1,1 +1,9 @@
-<p>chat works!</p>
+<div class="chat">
+    <div class="chatMessage"></div>
+    <div class="write">
+        <form #inputForm="ngForm">
+            <input type="text" name="testo" id="testo" ngModel>
+            <button class="btn btn-primary" id="invia">Invia</button>
+        </form>
+    </div>
+</div>

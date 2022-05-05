@@ -1,0 +1,12 @@
+.chat {
+    width: 20rem;
+    height: 30rem;
+    border: 0.1rem solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.write {
+    margin-top: auto;
+}
+
