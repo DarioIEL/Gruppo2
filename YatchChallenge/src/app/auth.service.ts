@@ -36,14 +36,16 @@ GoogleAuth() {
 PopupLogin(provider) {
   return this.afAuth
   .signInWithPopup(provider)
-  .then((result) => {
-    console.log("hai loggato con successo");
+  .then(() => {
+    window.alert("hai loggato con successo");
     
+  }).catch((error) => {
+    window.alert (error.message)
   });
 }
 
 
-signOut() {
+Logout() {
   return this.afAuth.signOut().then(() => {
     window.alert('Hai effettuato il logout con successo!');
 
