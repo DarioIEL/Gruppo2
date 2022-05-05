@@ -15,6 +15,7 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { OfferteComponent } from './home/offerte/offerte.component';
 import { ChatComponent } from './home/chat/chat.component';
 import { AcquistoComponent } from './acquisto/acquisto.component';
+import { AddComponent } from './add/add.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AcquistoComponent } from './acquisto/acquisto.component';
     CarouselComponent,
     OfferteComponent,
     ChatComponent,
-    AcquistoComponent
+    AcquistoComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
