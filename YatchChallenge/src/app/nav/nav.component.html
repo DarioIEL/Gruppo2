@@ -38,6 +38,13 @@
             <a class="nav-link" 
             routerLink="/login">Login</a>
           </li>
+<div *ngIf="authService.userData as user">
+          <li class="nav-item">
+            <a class="nav-link active">
+              <i class="fas fa-user">{{user.displayName}}</i>
+            </a>
+          </li>
+</div>
           <li class="nav-item">
             <a class="nav-link"
             (click)="authService.Logout()">
