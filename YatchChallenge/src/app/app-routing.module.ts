@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcquistoComponent } from './acquisto/acquisto.component';
+import { AddComponent } from './add/add.component';
 import { HomeComponent } from './home/home.component';
 import { InOffertaComponent } from './in-offerta/in-offerta.component';
 import { LoginComponent } from './login/login.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'mio-noleggio', component:MioNoleggioComponent},
   {path: 'nav', component: NavComponent, canActivate: [AuthGuard]},
   {path: 'login', component:LoginComponent},
-  {path: 'acquisto/:id', component: AcquistoComponent}
+  {path: 'acquisto/:id', component: AcquistoComponent},
+  {path: 'add', component:AddComponent}
 ];
 
 @NgModule({
