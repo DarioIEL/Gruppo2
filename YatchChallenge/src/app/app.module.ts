@@ -15,17 +15,14 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { OfferteComponent } from './home/offerte/offerte.component';
 import { ChatComponent } from './home/chat/chat.component';
 import { AcquistoComponent } from './acquisto/acquisto.component';
-<<<<<<< Updated upstream
 import { AuthService } from './auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
-=======
 import { AddComponent } from './add/add.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -40,20 +37,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     CarouselComponent,
     OfferteComponent,
     ChatComponent,
-    AcquistoComponent
+    AcquistoComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-<<<<<<< Updated upstream
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
 
     
-=======
     ReactiveFormsModule
->>>>>>> Stashed changes
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
