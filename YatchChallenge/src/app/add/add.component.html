@@ -1,1 +1,65 @@
-<p>add works!</p>
+<div class="container">
+
+  <form class="row g-3">
+
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nome dello Yacht</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+
+    <!-- immagine -->
+
+    <div class="col-md-12">
+    <div class="input-group mb-3">
+      
+        <form [formGroup]="myForm" (ngSubmit)="submit()">
+
+        <div class="img-fluid img-thumbnail" alt="your image" *ngIf="filePath && filePath !== ''">
+          <img [src]="filePath" [alt]="myForm.value.name">
+        </div>
+
+        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+          aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" />
+
+      </form>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Descrizione</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Prezzo</span>
+        <span class="input-group-text">€</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Tipo</span>
+        <select id="inputState" class="form-select">
+          <option selected>In offerta</option>
+          <option>Non in offerta</option>
+        </select>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button type="button" class="btn btn-outline-primary btn-lg">Aggiungi</button>
+
+    <button type="button" class="btn btn-outline-danger btn-lg">Elimina</button>
+  </div>
+
+</div>

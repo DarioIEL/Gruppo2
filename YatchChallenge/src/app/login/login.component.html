@@ -18,13 +18,13 @@
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     
-    <input type="button" class="btn btn-primary" value="Sign up" (click)="authService.SignIn(userEmail.value, userPassword.value)">
+    <input type="button" class="btn btn-primary" value="Accedi" (click)="authService.SignIn(userEmail.value, userPassword.value)">
     <!-- mettere il link della pagina dopo il login nella href -->
   </div>
 </div>
 
 <div class="formGroup">
-    <button type="button" class="btn" (click)="authService.GoogleAuth()">
+    <button type="button" class="btn btn-warning" (click)="authService.GoogleAuth()">
       Accedi con Google
     </button>
   </div>
