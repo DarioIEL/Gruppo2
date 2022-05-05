@@ -1,15 +1,30 @@
 <!-- Pagina del login -->
+
+<div class="formGroup">
 <div class="container">
 <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <input type="email" class="form-control" #userEmail placeholder="Email">
     <label for="floatingInput">Email</label>
 </div>
+</div>
+
+<div class="formGroup">
 <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <input type="password" class="form-control" #userPassword placeholder="Password">
     <label for="floatingPassword">Password</label>
 </div>
+</div>
+
+
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <a class="btn btn-primary" type="button" href="" role="button">Button</a>
+    
+    <input type="button" class="btn btn-primary" value="Sign up" (click)="authService.SignIn(userEmail.value, userPassword.value)">
     <!-- mettere il link della pagina dopo il login nella href -->
   </div>
 </div>
+
+<div class="formGroup">
+    <button type="button" class="btn" (click)="authService.GoogleAuth()">
+      Accedi con Google
+    </button>
+  </div>

@@ -3,9 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase : {
+  apiKey: "AIzaSyAphD3Weu_boEeL2NY4f3GTWMeci3JzTLI",
+  authDomain: "yatch-login.firebaseapp.com",
+  databaseURL: "https://yatch-login-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "yatch-login",
+  storageBucket: "yatch-login.appspot.com",
+  messagingSenderId: "510963728649",
+  appId: "1:510963728649:web:581b34bda88e3da03593d8",
+  measurementId: "G-YX90FSCCSY"
+}
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

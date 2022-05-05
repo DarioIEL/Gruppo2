@@ -15,7 +15,10 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { OfferteComponent } from './home/offerte/offerte.component';
 import { ChatComponent } from './home/chat/chat.component';
 import { AcquistoComponent } from './acquisto/acquisto.component';
-
+import { AuthService } from './auth.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,9 +38,15 @@ import { AcquistoComponent } from './acquisto/acquisto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
+    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
+
