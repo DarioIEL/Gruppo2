@@ -63,6 +63,10 @@ export class YatchService {
   public deleteYatch(){
     return this.http.delete(this.url)
   }
+
+  public postYatch(yatch: Yatch){
+    return this.http.post(this.url,yatch)
+  }
   
   public getYatchOfferta(){
     return this.getAll()

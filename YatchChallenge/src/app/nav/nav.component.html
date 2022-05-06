@@ -32,18 +32,22 @@
             <a class="nav-link" 
             routerLink="/mio-noleggio">I miei noleggi</a>
           </li>
-
+          <div *ngIf="authService.userData as user">
           <li class="nav-item"
             routerLinkActive="active">
             <a class="nav-link" 
             routerLink="/add">Aggiungi</a>
           </li>
+          </div>
 
+          <div *ngIf="!authService.userData as user">
           <li class="nav-item"
             routerLinkActive="active">
             <a class="nav-link" 
             routerLink="/login">Login</a>
           </li>
+        </div>
+
 <div *ngIf="authService.userData as user">
           <li class="nav-item">
             <a class="nav-link active">
@@ -51,12 +55,14 @@
             </a>
           </li>
 </div>
+<div *ngIf="authService.userData as user">
           <li class="nav-item">
             <a class="nav-link"
             (click)="authService.Logout()">
               logout
             </a>
           </li>
+        </div>
         </ul>
         
       </div>
