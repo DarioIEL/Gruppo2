@@ -13,18 +13,18 @@
     <!-- immagine -->
 
     <div class="col-md-12">
-    <div class="input-group mb-3">
-      
-        <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <div class="input-group mb-3">
 
-        <div class="img-fluid img-thumbnail" alt="your image" *ngIf="filePath && filePath !== ''">
-          <img [src]="filePath" [alt]="myForm.value.name">
-        </div>
+        <form *[formGroup]="myForm" (ngSubmit)="submit()">
 
-        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
-          aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" />
+          <div class="img-fluid img-thumbnail" alt="your image" *ngIf="filePath && filePath !== ''">
+            <img [src]="filePath" [alt]="myForm.value.name">
+          </div>
 
-      </form>
+          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+            aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" />
+
+        </form>
       </div>
     </div>
 
