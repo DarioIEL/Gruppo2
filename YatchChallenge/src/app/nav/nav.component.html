@@ -34,6 +34,10 @@
           </li>
 
           
+          
+        </ul>
+        
+        <ul class="navbar-nav ms-auto flex-nowrap">
           <div *ngIf="!authService.userData as user">
             <li class="nav-item"
             routerLinkActive="active">
@@ -41,11 +45,7 @@
             routerLink="/login">Login</a>
           </li>
         </div>
-        
-      </ul>
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
+          
         <div *ngIf="authService.userData as user">
           <li class="nav-item">
             <a class="nav-link active">
@@ -67,7 +67,11 @@
         <div *ngIf="authService.userData as user">
             <li class="nav-item">
               <a class="nav-link"
-              (click)="authService.Logout()">
+              (click)="authService.Logout()"
+              (click)="resetPage()"
+              
+             
+              >
                 logout
               </a>
             </li>
