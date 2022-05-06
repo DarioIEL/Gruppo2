@@ -6,7 +6,7 @@
       <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Nome dello Yacht</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default" required>
+          aria-describedby="inputGroup-sizing-default" *[(ngModel)]= "nome" required>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
         </div>
 
         <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
-          aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" required/>
+          aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" *[(ngModel)]= "img" required/>
 
         </form>
       </div>
@@ -31,7 +31,7 @@
     <div class="col-md-12">
       <div class="input-group mb-3">
         <span class="input-group-text">Descrizione</span>
-        <textarea class="form-control" aria-label="With textarea" required></textarea>
+        <textarea class="form-control" aria-label="With textarea" *[(ngModel)]= "descrizione" required></textarea>
       </div>
     </div>
 
@@ -40,14 +40,14 @@
         <span class="input-group-text" id="inputGroup-sizing-default">Prezzo</span>
         <span class="input-group-text">€</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default" required>
+          aria-describedby="inputGroup-sizing-default" *[(ngModel)]= "prezzo" required>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Tipo</span>
-        <select id="inputState" class="form-select">
+        <select id="inputState" class="form-select" *[(ngModel)]= "offerta">
           <option selected>In offerta</option>
           <option>Non in offerta</option>
         </select>
@@ -57,9 +57,9 @@
   </form>
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button type="button" class="btn btn-outline-primary" >Aggiungi</button> <!--(click)="inserisciDati()" -->
+    <button type="button" class="btn btn-outline-primary" (click)="updateYatch()">Aggiungi</button>
 
-    <button type="button" class="btn btn-outline-danger">Elimina</button>
+    <button type="button" class="btn btn-outline-danger" (click)="deleteYatch()">Elimina</button>
   </div>
 
 </div>
