@@ -40,4 +40,6 @@ export class AddComponent implements OnInit {
     console.log(this.myForm.value)
   }
 
+  
+
 }

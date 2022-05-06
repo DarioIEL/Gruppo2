@@ -64,7 +64,6 @@ export class YatchService {
     return this.http.delete(this.url)
   }
   
-  
   public getYatchOfferta(){
     return this.getAll()
     .pipe(map((y => y.filter(y => y.offerta == true))));
