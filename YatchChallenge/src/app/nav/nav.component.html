@@ -32,13 +32,13 @@
             <a class="nav-link" 
             routerLink="/mio-noleggio">I miei noleggi</a>
           </li>
-          <div *ngIf="authService.userData as user">
+          <!-- <div *ngIf="authService.userData as user"> -->
           <li class="nav-item"
             routerLinkActive="active">
             <a class="nav-link" 
             routerLink="/add">Aggiungi</a>
           </li>
-          </div>
+          <!-- </div> -->
 
           <div *ngIf="!authService.userData as user">
           <li class="nav-item"

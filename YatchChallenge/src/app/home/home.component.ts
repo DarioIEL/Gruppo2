@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private yatchService: YatchService) { }
 
   ngOnInit(): void {
-    console.log(this.yatchService.getYatchOfferta());
+    // console.log(this.yatchService.getYatchOfferta());
     
   }
 
