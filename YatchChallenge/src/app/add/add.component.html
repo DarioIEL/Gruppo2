@@ -6,7 +6,7 @@
       <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Nome dello Yacht</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default" required>
       </div>
     </div>
 
@@ -17,12 +17,12 @@
 
         <form *[formGroup]="myForm" (ngSubmit)="submit()">
 
-          <div class="img-fluid img-thumbnail" alt="your image" *ngIf="filePath && filePath !== ''">
-            <img [src]="filePath" [alt]="myForm.value.name">
-          </div>
+        <div class="img-fluid img-thumbnail" alt="your image" *ngIf="filePath && filePath !== ''">
+          <img [src]="filePath" [alt]="myForm.value.name" >
+        </div>
 
-          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
-            aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" />
+        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+          aria-label="Upload" accept="*/jpg " (change)="imagePreview($event)" required/>
 
         </form>
       </div>
@@ -31,7 +31,7 @@
     <div class="col-md-12">
       <div class="input-group mb-3">
         <span class="input-group-text">Descrizione</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" required></textarea>
       </div>
     </div>
 
@@ -40,7 +40,7 @@
         <span class="input-group-text" id="inputGroup-sizing-default">Prezzo</span>
         <span class="input-group-text">€</span>
         <input type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default">
+          aria-describedby="inputGroup-sizing-default" required>
       </div>
     </div>
 
@@ -57,9 +57,9 @@
   </form>
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button type="button" class="btn btn-outline-primary btn-lg">Aggiungi</button>
+    <button type="button" class="btn btn-outline-primary" >Aggiungi</button> <!--(click)="inserisciDati()" -->
 
-    <button type="button" class="btn btn-outline-danger btn-lg">Elimina</button>
+    <button type="button" class="btn btn-outline-danger">Elimina</button>
   </div>
 
 </div>
